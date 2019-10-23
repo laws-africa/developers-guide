@@ -10,7 +10,7 @@ description: >-
   research.
 ---
 
-# Content API
+# Content API Reference
 
 This guide is for developers who want to use the API to fetch legislative works. We assume that you have a basic understanding of REST APIs and the [Akoma Ntoso](http://www.akomantoso.org/) standard for legislation \(acts in particular\).
 
@@ -90,7 +90,7 @@ Finally, let's put that HTML into a webpage and include some stylesheets to make
 </div>
 ```
 
-![](.gitbook/assets/section-3-html.png)
+![](../.gitbook/assets/section-3-html.png)
 
 ## Works and Expressions
 

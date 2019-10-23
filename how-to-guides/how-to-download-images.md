@@ -5,7 +5,7 @@ lead: Downloading embedded images from the Laws.Africa Content API.
 description: Downloading embedded images from the Laws.Africa Content API.
 ---
 
-# How to Download Images
+# How to download images
 
 This guide will take you through how to work with images and other media embedded in expressions in Laws.Africa’s Content API. After reading this guide you will know:
 
