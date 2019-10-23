@@ -21,6 +21,8 @@ The Table of Contents \(TOC\) API is a JSON description of the hierarchy and str
 
 For example, here's a screenshot of the Table of Contents for [Cape Town's Animal By-law](https://openbylaws.org.za/za-cpt/act/by-law/2011/animal/eng/) generated using the TOC API:
 
+![](../.gitbook/assets/animal-bylaw-toc.png)
+
 Here's an extract of the corresponding JSON from the Table of Contents API:
 
 ```javascript
