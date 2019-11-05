@@ -257,6 +257,7 @@ The fields of the response are described in the table below.
 | locality | The code of the locality within the country. | String |
 | nature | The nature of this work, normally "act". | String |
 | number | Number of this work with its year, or some other unique way of identifying it within the year. | String |
+| parent\_work | The parent of this work. For subsidiary legislation, this is the principal legislation. | Object |
 | publication\_date | Date of original publication of the work. | ISO8601 |
 | publication\_name | Name of the publication in which the work was originally published. | String |
 | publication\_number | Number of the publication in which the work was originally published. | String |
