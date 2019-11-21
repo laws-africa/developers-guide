@@ -17,6 +17,10 @@ The English expression of the work, as it was amended on 17 January 2014, is uni
 When fetching details from the API, you are always fetching details for a particular expression of the work. The expression will also include information related to the expression's work, such as the work's FRBR URI and publication information. Even if you don't specific a particular date for the expression, the API will return the latest expression applicable for the date of the request.
 {% endhint %}
 
+{% hint style="info" %}
+The API supports the language and date aspects defined in the [Akoma Ntoso naming convention standard](http://docs.oasis-open.org/legaldocml/akn-nc/v1.0/akn-nc-v1.0.html).
+{% endhint %}
+
 {% api-method method="get" host="https://api.laws.africa" path="/v2/akn/:country/.:format" %}
 {% api-method-summary %}
 List works for a place
@@ -367,7 +371,7 @@ The fields of the work and expression endpoints are described in the table below
 
 #### Amendments
 
-The fields of the `amendments` property of the response are described below.
+The fields of the `amendments` property of the response are described below. These are the amendments that have been applied to produce this particular expression.
 
 | Field | Description | Type |
 | :--- | :--- | :--- |
@@ -377,7 +381,7 @@ The fields of the `amendments` property of the response are described below.
 
 #### Points in Time
 
-The fields of the `points_in_time` property of the response are described below.
+The fields of the `points_in_time` property of the response are described below. These are all the available points in time available for this work.
 
 | Field | Description | Type |
 | :--- | :--- | :--- |
@@ -407,10 +411,6 @@ The `.format` part of the FRBR URI is placed after the `@YYYY-MM-DD` part.
 
 {% hint style="info" %}
 If you use `@` to specify a particular date and the API doesn't have a version at exactly that date, it will return a 404 response. If you need the expression of the work closest to a particular date, use `:` instead. 
-{% endhint %}
-
-{% hint style="info" %}
-The API supports the language and date aspects defined in the [Akoma Ntoso naming convention standard](http://docs.oasis-open.org/legaldocml/akn-nc/v1.0/akn-nc-v1.0.html).
 {% endhint %}
 
 ### Date formats for specific points in time
