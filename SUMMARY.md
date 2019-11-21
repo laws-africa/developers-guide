@@ -3,9 +3,12 @@
 * [Laws.Africa Developers Guide](README.md)
 * [Quick start](quick-start.md)
 
-## API Reference
+## Content API V2 <a id="api-v2"></a>
 
-* [Content API Reference](api-reference/content-api.md)
+* [Overview](api-v2/content-api.md)
+* [Countries and localities](api-v2/countries-and-localities.md)
+* [Works and expressions](api-v2/works-and-expressions.md)
+* [Table of Contents](api-v2/table-of-contents.md)
 
 ## How-to Guides
 

@@ -66,5 +66,5 @@ Finally, let's put that HTML into a webpage and include some stylesheets to make
 
 ## Next steps
 
-{% page-ref page="api-reference/content-api.md" %}
+{% page-ref page="api-v2/content-api.md" %}
 

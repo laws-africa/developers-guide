@@ -7,7 +7,7 @@ description: Using the Laws.Africa Table of Contents API in your application.
 
 # How to use the Table of Contents API
 
-This guide will take you through how to use the Table of Contents \(TOC\) API, part of [Laws.Africa's Content API](../api-reference/content-api.md). After reading this guide you will know:
+This guide will take you through how to use the Table of Contents \(TOC\) API, part of [Laws.Africa's Content API](../api-v2/content-api.md). After reading this guide you will know:
 
 * what the Table of Contents API is and why it's useful
 * how to call the Table of Contents API
