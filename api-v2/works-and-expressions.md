@@ -48,10 +48,118 @@ Authentication token to identify you.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Paginated list of works.
+Paginated list of works in JSON format.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "url": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03",
+      "title": "By-Law relating to Beaches",
+      "created_at": "2019-06-27T18:28:27.231180Z",
+      "updated_at": "2019-06-27T18:28:27.481534Z",
+      "country": "za",
+      "locality": "wc033",
+      "nature": "act",
+      "subtype": "by-law",
+      "year": "2005",
+      "number": "beaches",
+      "frbr_uri": "/akn/za-wc033/act/by-law/2005/beaches",
+      "expression_frbr_uri": "/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03",
+      "publication_date": "2005-10-03",
+      "publication_name": "Western Cape Provincial Gazette",
+      "publication_number": "6303",
+      "publication_document": {
+        "url": "https://archive.opengazettes.org.za/archive/ZA-WC/2005/provincial-gazette-ZA-WC-no-6303-dated-2005-10-03.pdf",
+        "filename": "za-wc033-act-by-law-2005-beaches-publication-document.pdf",
+        "mime_type": "",
+        "size": null
+      },
+      "commenced": false,
+      "commencement_date": null,
+      "commencing_work": null,
+      "assent_date": null,
+      "repeal": null,
+      "parent_work": null,
+      "expression_date": "2005-10-03",
+      "language": "eng",
+      "points_in_time": [
+        {
+          "date": "2005-10-03",
+          "expressions": [
+            {
+              "title": "By-Law relating to Beaches",
+              "language": "eng",
+              "expression_date": "2005-10-03",
+              "expression_frbr_uri": "/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03",
+              "url": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03"
+            },
+            {
+              "title": "Verordening insake Strande",
+              "language": "afr",
+              "expression_date": "2005-10-03",
+              "expression_frbr_uri": "/akn/za-wc033/act/by-law/2005/beaches/afr@2005-10-03",
+              "url": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/afr@2005-10-03"
+            }
+          ]
+        }
+      ],
+      "amendments": [],
+      "stub": false,
+      "numbered_title": null,
+      "taxonomies": null,
+      "as_at_date": "2005-10-03",
+      "links": [
+        {
+          "rel": "alternate",
+          "title": "HTML",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03.html",
+          "mediaType": "text/html"
+        },
+        {
+          "rel": "alternate",
+          "title": "Standalone HTML",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03.html?standalone=1",
+          "mediaType": "text/html"
+        },
+        {
+          "rel": "alternate",
+          "title": "Akoma Ntoso",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03.xml",
+          "mediaType": "application/xml"
+        },
+        {
+          "rel": "alternate",
+          "title": "PDF",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03.pdf",
+          "mediaType": "application/pdf"
+        },
+        {
+          "rel": "alternate",
+          "title": "ePUB",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03.epub",
+          "mediaType": "application/epub+zip"
+        },
+        {
+          "rel": "toc",
+          "title": "Table of Contents",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03/toc.json",
+          "mediaType": "application/json"
+        },
+        {
+          "rel": "media",
+          "title": "Media",
+          "href": "https://api.laws.africa/v2/akn/za-wc033/act/by-law/2005/beaches/eng@2005-10-03/media.json",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}
 
 ```
 {% endapi-method-response-example %}
