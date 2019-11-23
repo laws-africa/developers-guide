@@ -5,7 +5,7 @@
 
 ## Content API V2 <a id="api-v2"></a>
 
-* [Overview](api-v2/content-api.md)
+* [Overview](api-v2/overview.md)
 * [Countries and localities](api-v2/countries-and-localities.md)
 * [Works and expressions](api-v2/works-and-expressions.md)
 * [Table of Contents](api-v2/table-of-contents.md)

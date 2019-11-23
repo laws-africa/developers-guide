@@ -8,7 +8,7 @@ This guide will help you to use the Laws.Africa Content API to integrate Laws.Af
 
 ### API Reference
 
-{% page-ref page="api-v2/content-api.md" %}
+{% page-ref page="api-v2/overview.md" %}
 
 ### **How-to Guides**
 
