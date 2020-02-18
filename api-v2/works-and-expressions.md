@@ -350,6 +350,7 @@ The fields of the work and expression endpoints are described in the table below
 | draft | Is this a draft work or is it available in the public API? | Boolean |
 | expression\_date | Date of this expression of the work. | ISO8601 |
 | commencement\_date | Date on which this work commences. | ISO8601 |
+| commencing\_work | Details of the work which commenced this work, if any. | Object |
 | expression\_frbr\_uri | FRBR URI of this expression of this work. | String |
 | frbr\_uri | FRBR URI for this work. | String |
 | id | Unique ID of this work. | Integer |
