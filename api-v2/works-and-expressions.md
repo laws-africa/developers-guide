@@ -342,7 +342,7 @@ The fields of the work and expression endpoints are described in the table below
 
 | Field | Description | Type |
 | :--- | :--- | :--- |
-| amendments | List of amendments that have been applied to create this expression of the work. | See below |
+| amendments | List of amendments that have been applied to create this expression of the work. | [See below](works-and-expressions.md#amendments) |
 | assent\_date | Date when the work was assented to. | ISO8601 |
 | content\_url | URL of the full content of the work. | URL |
 | country | ISO 3166-1 alpha-2 country code that this work is applicable to. | String |
@@ -360,6 +360,7 @@ The fields of the work and expression endpoints are described in the table below
 | nature | The nature of this work, normally "act". | String |
 | number | Number of this work with its year, or some other unique way of identifying it within the year. | String |
 | parent\_work | The parent of this work. For subsidiary legislation, this is the principal legislation. | Object |
+| points\_in\_time | Points in time that are available for this work. | [See below](works-and-expressions.md#points-in-time) |
 | publication\_date | Date of original publication of the work. | ISO8601 |
 | publication\_name | Name of the publication in which the work was originally published. | String |
 | publication\_number | Number of the publication in which the work was originally published. | String |
