@@ -388,7 +388,7 @@ The fields of the `points_in_time` property of the response are described below.
 | Field | Description | Type |
 | :--- | :--- | :--- |
 | date | Date of the point-in-time for which expressions are available | ISO8601 |
-| expressions | A list of expressions for this work available at this point in time |  |
+| expressions | A list of expressions for this work available at this point in time | List |
 | url | The API URL to fetch information on the expression | URL |
 | language | Three-letter language code of the language of the expression | String |
 | expression\_frbr\_uri | Unique Expression FRBR URI for this expression | String |
