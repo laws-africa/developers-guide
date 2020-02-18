@@ -382,6 +382,23 @@ The fields of the `amendments` property of the response are described below. The
 | amending\_uri | Work FRBR URI of the amending work | String |
 | date | Date on which the amendment takes place | ISO8601 |
 
+### Commencements
+
+The items in the `commencements` property describe the various commencements that apply to this work, and are the same for all expressions.
+
+In most cases, either the work is not commenced or a single work commences all of the work's provisions. In some edge cases, different provisions commence at different times and these objects describe those events.
+
+In some extreme cases, the work that performed the commencement, or the commencement date, might not be known.
+
+| Field | Description | Type |
+| :--- | :--- | :--- |
+| commencing\_title | Title of the commencing work \(optional\) | String |
+| commencing\_frbr\_uri | FRBR URI of the commencing work \(optional\) | String |
+| date | Date of the commencement event \(optional\) | ISO8601 |
+| main | Is this considered the primary or main commencement event? This is usually the event that commences the bulk of the work. | Boolean |
+| all\_provisions | Does this event commence all provisions? If this is true, there will only be one of these commencement objects. | Boolean |
+| provisions | A list of IDs of the provisions that are commenced by this event. This is always empty if `all_provisions` is true. | List |
+
 ### Points in Time
 
 The fields of the `points_in_time` property of the response are described below. These are all the available points in time available for this work.
@@ -424,21 +441,4 @@ If you use `@` to specify a particular date and the API doesn't have a version a
 | `@YYYY-MM-DD` | Expression at the specific date. | `/akn/za/act/1998/55/eng@2014-01-17` |
 | `:YYYY-MM-DD` | Most recent expression at or before a date. | `/akn/za/act/1998/55/eng:2015-01-01` |
 | \(none\) | The most recent expression at or before today's date. Equivalent to using `:` with today's date. | `/akn/za/act/1998/55/eng` |
-
-### Commencements
-
-The items in the `commencements` property describe the various commencements that apply to this work, and are the same for all expressions.
-
-In most cases, either the work is not commenced or a single work commences all of the work's provisions. In some edge cases, different provisions commence at different times and these objects describe those events.
-
-In some extreme cases, the work that performed the commencement, or the commencement date, might not be known.
-
-| Field | Description | Type |
-| :--- | :--- | :--- |
-| commencing\_title | Title of the commencing work \(optional\) | String |
-| commencing\_frbr\_uri | FRBR URI of the commencing work \(optional\) | String |
-| date | Date of the commencement event \(optional\) | ISO8601 |
-| main | Is this considered the primary or main commencement event? This is usually the event that commences the bulk of the work. | Boolean |
-| all\_provisions | Does this event commence all provisions? If this is true, there will only be one of these commencement objects. | Boolean |
-| provisions | A list of IDs of the provisions that are commenced by this event. This is always empty if `all_provisions` is true. | List |
 
