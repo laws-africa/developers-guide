@@ -343,6 +343,7 @@ The fields of the work and expression endpoints are described in the table below
 | Field | Description | Type |
 | :--- | :--- | :--- |
 | amendments | List of amendments that have been applied to create this expression of the work. | [See below](works-and-expressions.md#amendments) |
+| as\_at\_date | Date up to which this work is known to be up-to-date. | ISO8601  |
 | assent\_date | Date when the work was assented to. | ISO8601 |
 | content\_url | URL of the full content of the work. | URL |
 | country | ISO 3166-1 alpha-2 country code that this work is applicable to. | String |
