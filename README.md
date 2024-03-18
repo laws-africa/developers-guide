@@ -1,22 +1,35 @@
-# Laws.Africa Developers Guide
+# Laws.Africa Developer Guide
 
-Welcome to the Laws.Africa Developers Guide.
+Welcome to the Laws.Africa Developer Guide.
 
-This guide will help you to use the Laws.Africa Content API to integrate Laws.Africa legislation commons content into your website or application.
+This guide will help you to use the Laws.Africa Content API to integrate Laws.Africa legislation  content into your website or application.
 
-{% page-ref page="quick-start.md" %}
+{% content-ref url="get-started/overview.md" %}
+[overview.md](get-started/overview.md)
+{% endcontent-ref %}
+
+### **Tutorial**
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 ### API Reference
 
-{% page-ref page="api-v2/overview.md" %}
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 ### **How-to Guides**
 
-{% page-ref page="how-to-guides/how-to-use-the-table-of-contents-api.md" %}
+{% content-ref url="how-to-guides/how-to-use-the-table-of-contents-api.md" %}
+[how-to-use-the-table-of-contents-api.md](how-to-guides/how-to-use-the-table-of-contents-api.md)
+{% endcontent-ref %}
 
-{% page-ref page="how-to-guides/how-to-download-images.md" %}
+{% content-ref url="how-to-guides/how-to-download-images.md" %}
+[how-to-download-images.md](how-to-guides/how-to-download-images.md)
+{% endcontent-ref %}
 
 ### **Still not sure?**
 
 * [Contact Us](https://laws.africa/contact)
-

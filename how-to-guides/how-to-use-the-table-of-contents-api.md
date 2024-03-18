@@ -7,7 +7,7 @@ description: Using the Laws.Africa Table of Contents API in your application.
 
 # How to use the Table of Contents API
 
-This guide will take you through how to use the Table of Contents \(TOC\) API, part of [Laws.Africa's Content API](../api-v2/overview.md). After reading this guide you will know:
+This guide will take you through how to use the Table of Contents (TOC) API, part of [Laws.Africa's Content API](../get-started/overview.md). After reading this guide you will know:
 
 * what the Table of Contents API is and why it's useful
 * how to call the Table of Contents API
@@ -17,7 +17,7 @@ This guide will take you through how to use the Table of Contents \(TOC\) API, p
 
 ## What is the Table of Contents API?
 
-The Table of Contents \(TOC\) API is a JSON description of the hierarchy and structure of a work. It's useful for including a Table of Contents in your website or application, or for helping your users navigate or explore the structure of a work.
+The Table of Contents (TOC) API is a JSON description of the hierarchy and structure of a work. It's useful for including a Table of Contents in your website or application, or for helping your users navigate or explore the structure of a work.
 
 For example, here's a screenshot of the Table of Contents for [Cape Town's Animal By-law](https://openbylaws.org.za/za-cpt/act/by-law/2011/animal/eng/) generated using the TOC API:
 
@@ -248,4 +248,3 @@ select.addEventListener('change', selectionChanged);
 makeTocSelect(toc);
 
 ```
-
