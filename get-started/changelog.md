@@ -8,6 +8,10 @@ description: Changes to the Laws.Africa API.
 Version V2 of the API is deprecated and will be disabled during 2024. Please migrate to V3 of the API.
 {% endhint %}
 
+## New in V3
+
+* The `/v3/taxonomy-topics/<slug>/work-expressions` URL is new. It lists work expressions under a taxonomy topic.
+
 ## Differences between V2 and V3
 
 There are only minor changes between V2 and V3 of the Content API.
