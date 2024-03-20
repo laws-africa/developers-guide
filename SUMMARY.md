@@ -7,6 +7,7 @@
 * [Introduction](get-started/overview.md)
 * [Quick start](get-started/quick-start.md)
 * [Webhooks](get-started/webhooks.md)
+* [Changelog](get-started/changelog.md)
 
 ## Tutorial
 
@@ -39,6 +40,7 @@
 * [Countries and localities](api/countries-and-localities.md)
 * [Works and expressions](api/works-and-expressions.md)
 * [Table of Contents](api/table-of-contents.md)
+* [Taxonomies](api/taxonomies.md)
 
 ## How-to Guides
 
