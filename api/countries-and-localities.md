@@ -16,67 +16,16 @@ Localities are identified using a combination of the country code and a locality
 
 Locality codes are not well standardised and may vary between different countries. In South Africa, for example, municipalities are identified by the codes determined by the [South African Municipal Demarcation Board](http://www.demarcation.org.za/).
 
-{% swagger baseUrl="https://api.laws.africa" path="/v2/countries.json" method="get" summary="Get countries and localities" %}
-{% swagger-description %}
-This endpoint lists the countries and localities that Laws.Africa knows about. It includes links to the APIs for listing works for each country and locality.
-{% endswagger-description %}
+## Get places
 
-{% swagger-parameter in="header" name="Authentication" type="string" %}
-Authentication token to identify you.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Paginated list list of countries, localities and API endpoints." %}
-```javascript
-{
-  "count": 2,
-  "next": null,
-  "previous": null,
-  "results": [
-    {
-      "code": "na",
-      "name": "Namibia",
-      "localities": [],
-      "links": [
-        {
-          "rel": "works",
-          "title": "Works",
-          "href": "https://api.laws.africa/v2/akn/na/"
-        },
-      ]
-    },
-    {
-      "code": "za",
-      "name": "South Africa",
-      "localities": [
-        {
-          "code": "wc033",
-          "name": "Cape Agulhas",
-          "frbr_uri_code": "za-wc033",
-          "links": [
-            {
-              "rel": "works",
-              "title": "Works",
-              "href": "https://api.laws.africa/v2/akn/za-wc033/"
-            }
-          ]
-        },
-        {
-          "code": "cpt",
-          "name": "Cape Town",
-          "frbr_uri_code": "za-cpt",
-          "links": [
-            {
-              "rel": "works",
-              "title": "Works",
-              "href": "https://api.laws.africa/v2/akn/za-cpt/"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-{% endswagger-response %}
+{% swagger src="https://api.laws.africa/v3/schema" path="/v3/places" method="get" %}
+[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
 {% endswagger %}
 
+### Get work expressions for a place
+
+Use the `frbr_uri_code` for the place to fetch work expressions in that place.
+
+{% swagger src="https://api.laws.africa/v3/schema" path="/v3/places/{frbr_uri_code}/work-expressions" method="get" %}
+[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% endswagger %}
