@@ -4,41 +4,11 @@ description: Fetching the Table of Contents for an expression.
 
 # Table of Contents
 
-You can get a description of the table of contents (TOC) of a work. This includes the chapters, parts, sections and schedules that make up the legislation, based on the structure captured by the Laws.Africa editor.
+You can get a description of the table of contents (TOC) of a work. This includes the chapters, parts, sections and schedules that make up the legislation.
 
 {% content-ref url="../how-to-guides/how-to-use-the-table-of-contents-api.md" %}
 [how-to-use-the-table-of-contents-api.md](../how-to-guides/how-to-use-the-table-of-contents-api.md)
 {% endcontent-ref %}
-
-Each item in the table of contents has this structure:
-
-```javascript
-{
-  "id": "chapter-1",
-  "type": "chapter",
-  "num": "1",
-  "heading": "Interpretation",
-  "title": "Chapter 1 - Interpretation",
-  "component": "main",
-  "subcomponent": "chapter/1",
-  "url": "http://api.laws.africa/v2/akn/za/act/1998/10/eng/main/chapter/1",
-  "children": [ "..." ]
-}
-```
-
-Each of these fields is described in the table below.
-
-| Field        | Description                                                                                                                                         | Type   |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| id           | The unique XML element id of this item. (optional)                                                                                                  | String |
-| type         | The Akoma Ntoso element name of this item.                                                                                                          | String |
-| num          | The number of this item, such as a chapter, part or section number. (optional)                                                                      | String |
-| heading      | The heading of this item (optional)                                                                                                                 | String |
-| title        | A derived, friendly title of this item, taking `num` and `heading` into account and providing good defaults if either of those is missing.          | String |
-| component    | The component of the Akoma Ntoso document that this item is a part of, such as `main` for the main document, or `schedule1` for the first schedule. | String |
-| subcomponent | The subcomponent of the component that this item is a part of, such as a chapter. (optional)                                                        | String |
-| url          | The API URL for this item, which can be used to fetch XML, HTML and other details of just this part of the document.                                | String |
-| children     | A possibly-empty array of TOC items that are children of this item.                                                                                 | Arra   |
 
 ## Get the Table of Contents for an expression
 
