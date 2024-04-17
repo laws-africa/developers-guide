@@ -40,13 +40,14 @@
 * [Pagination](api/pagination.md)
 * [Places](api/countries-and-localities.md)
 * [All work expressions](api/all-work-expressions.md)
-* [Single work expression](api/works-and-expressions/README.md)
+* [Single work expression](api/works-and-expressions.md)
   * [Commencements](api/works-and-expressions/commencements.md)
   * [Embedded images](api/works-and-expressions/embedded-images.md)
   * [Publication document](api/works-and-expressions/publication-document.md)
-  * [Table of Contents](api/works-and-expressions/table-of-contents.md)
+  * [Table of Contents](api/table-of-contents.md)
   * [Timeline](api/works-and-expressions/timeline.md)
-* [Taxonomies](api/taxonomies.md)
+* [Taxonomy topics](api/taxonomy-topics.md)
+* [Enrichment datasets](api/enrichment-datasets.md)
 
 ## How-to Guides
 

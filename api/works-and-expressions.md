@@ -134,38 +134,38 @@ Supported content types: JSON, HTML, PDF, ePub, zip
 
 The fields of the work and expression endpoints are described in the table below.
 
-| Field                 | Description                                                                                    | Type                           |
-| --------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------ |
-| amendments            | List of amendments that have been applied to create this expression of the work.               | [See below](./#amendments)     |
-| as\_at\_date          | Date up to which this work is known to be up-to-date.                                          | ISO8601                        |
-| assent\_date          | Date when the work was assented to.                                                            | ISO8601                        |
-| content\_url          | URL of the full content of the work.                                                           | URL                            |
-| country               | ISO 3166-1 alpha-2 country code that this work is applicable to.                               | String                         |
-| created\_at           | Timestamp of when the work was first created.                                                  | ISO8601                        |
-| draft                 | Is this a draft work or is it available in the public API?                                     | Boolean                        |
-| expression\_date      | Date of this expression of the work.                                                           | ISO8601                        |
-| commencement\_date    | Date on which this work commences.                                                             | ISO8601                        |
-| commencing\_work      | Details of the work which commenced this work, if any.                                         | Object                         |
-| commencements         | Details of the commencements which apply to this work.                                         | [See below](./#commencements)  |
-| expression\_frbr\_uri | FRBR URI of this expression of this work.                                                      | String                         |
-| frbr\_uri             | FRBR URI for this work.                                                                        | String                         |
-| id                    | Unique ID of this work.                                                                        | Integer                        |
-| language              | Three letter ISO-639-2 language code for this expression of the work.                          | String                         |
-| links                 | A description of links to other formats of this expression that are available through the API. | Array                          |
-| locality              | The code of the locality within the country.                                                   | String                         |
-| nature                | The nature of this work, normally "act".                                                       | String                         |
-| number                | Number of this work with its year, or some other unique way of identifying it within the year. | String                         |
-| parent\_work          | The parent of this work. For subsidiary legislation, this is the principal legislation.        | Object                         |
-| points\_in\_time      | Points in time that are available for this work.                                               | [See below](./#points-in-time) |
-| publication\_date     | Date of original publication of the work.                                                      | ISO8601                        |
-| publication\_name     | Name of the publication in which the work was originally published.                            | String                         |
-| publication\_number   | Number of the publication in which the work was originally published.                          | String                         |
-| repeal                | Description of the repeal of this work, if it has been repealed.                               | See below                      |
-| subtype               | Subtype code of the work.                                                                      | String                         |
-| title                 | Short title of the work, in the appropriate language.                                          | String                         |
-| updated\_at           | Timestamp of when the work was last updated.                                                   | ISO8601                        |
-| url                   | URL for fetching details of this work.                                                         | URL                            |
-| year                  | Year of the work.                                                                              | Stri                           |
+| Field                 | Description                                                                                    | Type                                                 |
+| --------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| amendments            | List of amendments that have been applied to create this expression of the work.               | [See below](works-and-expressions.md#amendments)     |
+| as\_at\_date          | Date up to which this work is known to be up-to-date.                                          | ISO8601                                              |
+| assent\_date          | Date when the work was assented to.                                                            | ISO8601                                              |
+| content\_url          | URL of the full content of the work.                                                           | URL                                                  |
+| country               | ISO 3166-1 alpha-2 country code that this work is applicable to.                               | String                                               |
+| created\_at           | Timestamp of when the work was first created.                                                  | ISO8601                                              |
+| draft                 | Is this a draft work or is it available in the public API?                                     | Boolean                                              |
+| expression\_date      | Date of this expression of the work.                                                           | ISO8601                                              |
+| commencement\_date    | Date on which this work commences.                                                             | ISO8601                                              |
+| commencing\_work      | Details of the work which commenced this work, if any.                                         | Object                                               |
+| commencements         | Details of the commencements which apply to this work.                                         | [See below](works-and-expressions.md#commencements)  |
+| expression\_frbr\_uri | FRBR URI of this expression of this work.                                                      | String                                               |
+| frbr\_uri             | FRBR URI for this work.                                                                        | String                                               |
+| id                    | Unique ID of this work.                                                                        | Integer                                              |
+| language              | Three letter ISO-639-2 language code for this expression of the work.                          | String                                               |
+| links                 | A description of links to other formats of this expression that are available through the API. | Array                                                |
+| locality              | The code of the locality within the country.                                                   | String                                               |
+| nature                | The nature of this work, normally "act".                                                       | String                                               |
+| number                | Number of this work with its year, or some other unique way of identifying it within the year. | String                                               |
+| parent\_work          | The parent of this work. For subsidiary legislation, this is the principal legislation.        | Object                                               |
+| points\_in\_time      | Points in time that are available for this work.                                               | [See below](works-and-expressions.md#points-in-time) |
+| publication\_date     | Date of original publication of the work.                                                      | ISO8601                                              |
+| publication\_name     | Name of the publication in which the work was originally published.                            | String                                               |
+| publication\_number   | Number of the publication in which the work was originally published.                          | String                                               |
+| repeal                | Description of the repeal of this work, if it has been repealed.                               | See below                                            |
+| subtype               | Subtype code of the work.                                                                      | String                                               |
+| title                 | Short title of the work, in the appropriate language.                                          | String                                               |
+| updated\_at           | Timestamp of when the work was last updated.                                                   | ISO8601                                              |
+| url                   | URL for fetching details of this work.                                                         | URL                                                  |
+| year                  | Year of the work.                                                                              | Stri                                                 |
 
 ### Amendments
 

@@ -9,7 +9,7 @@ Use the global work expressions API to fetch all work expressions your subscript
 {% hint style="info" %}
 You can use the [place-specific work expressions API](countries-and-localities.md) to fetch work expressions for a particular place.
 
-You can use the [taxonomies work expressions API](taxonomies.md) to fetch work expressions for a particular taxonomy topic.
+You can use the [taxonomies work expressions API](taxonomy-topics.md) to fetch work expressions for a particular taxonomy topic.
 {% endhint %}
 
 ## Fetch work expressions for all places

@@ -6,8 +6,8 @@ description: Fetching the Table of Contents for an expression.
 
 You can get a description of the table of contents (TOC) of a work. This includes the chapters, parts, sections and schedules that make up the legislation, based on the structure captured by the Laws.Africa editor.
 
-{% content-ref url="../../how-to-guides/how-to-use-the-table-of-contents-api.md" %}
-[how-to-use-the-table-of-contents-api.md](../../how-to-guides/how-to-use-the-table-of-contents-api.md)
+{% content-ref url="../how-to-guides/how-to-use-the-table-of-contents-api.md" %}
+[how-to-use-the-table-of-contents-api.md](../how-to-guides/how-to-use-the-table-of-contents-api.md)
 {% endcontent-ref %}
 
 Each item in the table of contents has this structure:
