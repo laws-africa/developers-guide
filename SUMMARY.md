@@ -6,6 +6,7 @@
 
 * [Introduction](get-started/overview.md)
 * [Quick start](get-started/quick-start.md)
+* [Works and expressions](get-started/works-and-expressions.md)
 * [Webhooks](get-started/webhooks.md)
 * [Changelog](get-started/changelog.md)
 
@@ -37,9 +38,14 @@
 * [About the API](api/about-the-api.md)
 * [Authentication](api/authentication.md)
 * [Pagination](api/pagination.md)
-* [Countries and localities](api/countries-and-localities.md)
-* [Works and expressions](api/works-and-expressions.md)
-* [Table of Contents](api/table-of-contents.md)
+* [Places](api/countries-and-localities.md)
+* [All work expressions](api/all-work-expressions.md)
+* [Single work expression](api/works-and-expressions/README.md)
+  * [Commencements](api/works-and-expressions/commencements.md)
+  * [Embedded images](api/works-and-expressions/embedded-images.md)
+  * [Publication document](api/works-and-expressions/publication-document.md)
+  * [Table of Contents](api/works-and-expressions/table-of-contents.md)
+  * [Timeline](api/works-and-expressions/timeline.md)
 * [Taxonomies](api/taxonomies.md)
 
 ## How-to Guides

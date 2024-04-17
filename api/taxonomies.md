@@ -59,4 +59,4 @@ Lists the work expressions that are tagged with the topic identify by `<slug>`.
 
 **Response body**
 
-See [Works and expressions](works-and-expressions.md).
+See [Works and expressions](works-and-expressions/).
