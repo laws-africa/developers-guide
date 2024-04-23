@@ -6,8 +6,8 @@ description: Fetch a single work expression using an FRBR URI.
 
 ## Fetch a single work expression
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/{frbr_uri}" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/{frbr_uri}" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
 #### Query Parameters

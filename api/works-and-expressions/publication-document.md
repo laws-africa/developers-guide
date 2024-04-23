@@ -17,6 +17,6 @@ The original publication document is different to the PDF version of a work expr
 
 The full URL to download the publication document is part of the `publication_document` field in the details of the work.
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/{frbr_uri}/media/publication/{filename}" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/{frbr_uri}/media/publication/{filename}" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}

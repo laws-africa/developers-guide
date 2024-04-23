@@ -18,20 +18,20 @@ Locality codes are not well standardised and may vary between different countrie
 
 ## Get places
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/places" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/places" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
 ## Get a place
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/places/{frbr_uri_code}" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/places/{frbr_uri_code}" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
 ## Get work expressions for a place
 
 Use the `frbr_uri_code` for the place to fetch work expressions in that place.
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/places/{frbr_uri_code}/work-expressions" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/places/{frbr_uri_code}/work-expressions" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}

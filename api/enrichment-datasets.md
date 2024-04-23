@@ -29,12 +29,12 @@ An enrichment applies to a provision across all expressions of a work.
 
 ## List enrichment datasets
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/enrichment-datasets/" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/enrichment-datasets" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
 ## Get details of an enrichment dataset
 
-{% swagger src="https://api.laws.africa/v3/schema" path="/v3/enrichment-datasets/{id}/" method="get" %}
-[https://api.laws.africa/v3/schema](https://api.laws.africa/v3/schema)
+{% swagger src="../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml" path="/v3/enrichment-datasets/{id}" method="get" %}
+[Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
