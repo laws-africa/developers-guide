@@ -8,6 +8,8 @@ description: Create models for storing data in the database.
 
 * Create the Django models for storing data in the database
 
+## Creating the database models
+
 We're going to create a **Work** model and an **Expression** model. Both models are uniquely identified by their respective **FRBR URIs**.
 
 {% hint style="info" %}
