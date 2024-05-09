@@ -4,6 +4,8 @@ description: Understand these two important concepts.
 
 # Works and expressions
 
+<figure><img src="../.gitbook/assets/image.avif" alt=""><figcaption></figcaption></figure>
+
 Two important concepts that are an essential part of the API are **works** and **expressions**.
 
 * A **Work** is a piece of legislation, such as an act, regulation or by-law. A work may be amended over time and may even have its title changed. A work is uniquely identified by a _work FRBR URI_ which never changes.
@@ -15,6 +17,10 @@ The English expression of the work, as it was amended on 17 January 2014, is uni
 
 {% hint style="info" %}
 When fetching details from the API, you are always fetching details for a particular expression of the work. The expression will also include information related to the expression's work, such as the work's FRBR URI and publication information. Even if you don't specific a particular date for the expression, the API will return the latest expression applicable at the time of the request.
+{% endhint %}
+
+{% hint style="info" %}
+Read more about the terminology used by Laws.Africa in our [Terminology Guide](https://docs.laws.africa/getting-started/terminology-guide).
 {% endhint %}
 
 ## Akoma Ntoso FRBR URIs

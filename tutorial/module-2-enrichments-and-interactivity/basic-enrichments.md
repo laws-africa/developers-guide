@@ -79,7 +79,7 @@ Add this script block to the bottom of `expression_detail.html`:
           const eId = node.getAttribute('data-eid');
           const comment = prompt(`What's your comment on this section? (#${eId})`);
           if (comment) {
-            item = document.createElement('la-gutter-item');
+            const item = document.createElement('la-gutter-item');
             item.setAttribute('anchor', `#${eId}`);
             item.innerText = comment;
             document.getElementById('gutter').appendChild(item);

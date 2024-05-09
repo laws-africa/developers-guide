@@ -11,6 +11,8 @@ description: Some key details before we build our legislation app.
 
 ### Works and expressions
 
+<figure><img src="../../.gitbook/assets/image.avif" alt=""><figcaption></figcaption></figure>
+
 A **work** is a piece of legislation.
 
 It _does_ include all the metadata concerning publication and other lifecycle events (commencements, amendments, and repeals).
@@ -24,6 +26,10 @@ A work can have multiple expressions. Most of the metadata on an expression is i
 One key difference between a work and an expression is that an expression can have a different title from the work's, according to its language and date.
 
 The language and date belong to the expression only.
+
+{% hint style="info" %}
+Read more about the terminology used by Laws.Africa in our [Terminology Guide](https://docs.laws.africa/getting-started/terminology-guide).&#x20;
+{% endhint %}
 
 #### FRBR URI essentials
 
