@@ -13,7 +13,7 @@ Two important concepts that are an essential part of the API are **works** and *
 
 An example of a work is the South African _Employment Equity Amendment Act, 2013 (Act 55 of 1998)_ with unique work FRBR URI `/akn/za/act/1998/55`. This act has been amended a number of times since it was first passed. Each amended version (also called a _point in time_) is a unique expression of the work.
 
-The English expression of the work, as it was amended on 17 January 2014, is uniquely identified by the expression FRBR URI `/act/1998/55/eng@2014-01-17`. You can see that this is built from the work's URI, with a language code `eng` and the expression date `2014-01-17` included.
+The English expression of the work, as it was amended on 17 January 2014, is uniquely identified by the expression FRBR URI `/act/za/act/1998/55/eng@2014-01-17`. You can see that this is built from the work's URI, with a language code `eng` and the expression date `2014-01-17` included.
 
 {% hint style="info" %}
 When fetching details from the API, you are always fetching details for a particular expression of the work. The expression will also include information related to the expression's work, such as the work's FRBR URI and publication information. Even if you don't specific a particular date for the expression, the API will return the latest expression applicable at the time of the request.
