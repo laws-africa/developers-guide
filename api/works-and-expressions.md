@@ -10,7 +10,11 @@ description: Fetch a single work expression using an FRBR URI.
 [Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
-#### Query Parameters
+#### Query Parameters for HTML Content
+
+When fetching HTML content (using the `.html` endpoint), you can control some aspects of how the HTML is generated using query parameters.
+
+For example, usually you will want to make links to other legislation relative to your website. You can do this by using `?resolver=none` when fetching the HTML.
 
 | Name       | Type   | Description                                                                                                                                                                 |
 | ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
