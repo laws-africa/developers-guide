@@ -10,7 +10,9 @@ description: Fetch a single work expression using an FRBR URI.
 [Laws.Africa Content API 2024-04-23.yaml](<../.gitbook/assets/Laws.Africa Content API 2024-04-23.yaml>)
 {% endswagger %}
 
-#### Query Parameters for HTML Content
+Supported content types: JSON, HTML, PDF, ePub, zip.
+
+### Query Parameters for HTML Content
 
 When fetching HTML content (using the `.html` endpoint), you can control some aspects of how the HTML is generated using query parameters.
 
@@ -22,8 +24,6 @@ For example, usually you will want to make links to other legislation relative t
 | media-url  | string | The fully-qualified URL prefix to use when generating links to embedded media, such as images.                                                                              |
 | resolver   | string | The fully-qualified URL to use when resolving references to other Akoma Ntoso documents. Use `no` or `none` to disable. Defaults to using the Laws.Africa resolver.         |
 | standalone | number | If this is `1` , the response will be a complete HTML document, including CSS, that can stand on its own. Otherwise it will be an HTML fragment. Default: false. HTML-only. |
-
-Supported content types: JSON, HTML, PDF, ePub, zip
 
 ## Expressions at specific points in time
 
