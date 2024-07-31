@@ -1,0 +1,248 @@
+openapi: 3.0.3
+info:
+  title: Laws.Africa Content API
+  version: 19.0.0 (v1)
+  description: Read-only Content API
+paths:
+  /ai/v1/knowledge-bases:
+    get:
+      operationId: knowledge_bases_list
+      description: |-
+        Get details of Laws.Africa's Knowledge Bases.
+
+        Note: this API is a preview and may change in future.
+      summary: Explore legal data Knowledge Bases for use with Generative AI (PREVIEW).
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      tags:
+      - knowledge-bases
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedKnowledgeBaseList'
+          description: ''
+  /ai/v1/knowledge-bases/{code}:
+    get:
+      operationId: knowledge_bases_retrieve
+      description: |-
+        Get details of Laws.Africa's Knowledge Bases.
+
+        Note: this API is a preview and may change in future.
+      summary: Explore legal data Knowledge Bases for use with Generative AI (PREVIEW).
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+          description: Unique code identifying this knowledge base
+        required: true
+      tags:
+      - knowledge-bases
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeBase'
+          description: ''
+  /ai/v1/knowledge-bases/{code}/retrieve:
+    post:
+      operationId: knowledge_bases_retrieve_create
+      description: Retrieve items from the knowledge base that match your query.
+      summary: Query the knowledge base for matching items.
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+          description: Unique code identifying this knowledge base
+        required: true
+      tags:
+      - knowledge-bases
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeBaseRetrieveRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/KnowledgeBaseRetrieveRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/KnowledgeBaseRetrieveRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeBaseRetrieveResponse'
+          description: ''
+  /ai/v1/schema:
+    get:
+      operationId: schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - en
+          - fr
+      tags:
+      - schema
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+components:
+  schemas:
+    KnowledgeBase:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Unique code identifying this knowledge base
+          maxLength: 50
+          pattern: ^[-a-zA-Z0-9_]+$
+        name:
+          type: string
+          description: Name of the knowledge base
+          maxLength: 255
+        description:
+          type: string
+          description: Description of the knowledge base
+        url:
+          type: string
+          format: uri
+          readOnly: true
+      required:
+      - code
+      - description
+      - name
+      - url
+    KnowledgeBaseItem:
+      type: object
+      description: A knowledge base item.
+      properties:
+        content:
+          $ref: '#/components/schemas/KnowledgeBaseItemContent'
+        metadata:
+          type: object
+          additionalProperties: {}
+          description: Metadata for the item
+        score:
+          type: number
+          format: double
+          maximum: 1.0
+          minimum: 0
+          description: The relevance score of the item
+      required:
+      - content
+      - metadata
+      - score
+    KnowledgeBaseItemContent:
+      type: object
+      description: The content of a knowledge base item.
+      properties:
+        text:
+          type: string
+          description: The text content of the item
+      required:
+      - text
+    KnowledgeBaseRetrieveRequest:
+      type: object
+      description: Details to retrieve items from a knowledge base.
+      properties:
+        text:
+          type: string
+          description: The text to find matching items for
+        top_k:
+          type: integer
+          maximum: 10
+          minimum: 1
+          default: 5
+          description: Number of results to return
+      required:
+      - text
+    KnowledgeBaseRetrieveResponse:
+      type: object
+      description: Items retrieved from a knowledge base.
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/KnowledgeBaseItem'
+      required:
+      - results
+    PaginatedKnowledgeBaseList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/KnowledgeBase'
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid

@@ -33,9 +33,9 @@
   * [Advanced text extraction](tutorial/module-3-text-extraction-for-search-and-analysis/advanced-text-extraction.md)
   * [Extracting text for analysis and machine learning](tutorial/module-3-text-extraction-for-search-and-analysis/extracting-text-for-analysis-and-machine-learning.md)
 
-## API Reference <a href="#api" id="api"></a>
+## Content API Reference <a href="#api" id="api"></a>
 
-* [About the API](api/about-the-api.md)
+* [About the Content API](api/about-the-api.md)
 * [Authentication](api/authentication.md)
 * [Pagination](api/pagination.md)
 * [Places](api/countries-and-localities.md)
@@ -53,3 +53,9 @@
 
 * [How to use the Table of Contents API](how-to-guides/how-to-use-the-table-of-contents-api.md)
 * [How to download images](how-to-guides/how-to-download-images.md)
+
+## AI API (Preview) <a href="#ai-api" id="ai-api"></a>
+
+* [About the AI API](ai-api/about-the-api.md)
+* [Authentication](ai-api/authentication.md)
+* [Knowledge Bases](ai-api/knowledge-bases.md)

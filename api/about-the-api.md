@@ -1,6 +1,8 @@
-# About the API
+---
+description: This describes the Laws.Africa Content API.
+---
 
-This describes the Laws.Africa Content API.
+# About the Content API
 
 ## Endpoint
 
