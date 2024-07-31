@@ -49,13 +49,13 @@
 * [Taxonomy topics](api/taxonomy-topics.md)
 * [Enrichment datasets](api/enrichment-datasets.md)
 
-## How-to Guides
-
-* [How to use the Table of Contents API](how-to-guides/how-to-use-the-table-of-contents-api.md)
-* [How to download images](how-to-guides/how-to-download-images.md)
-
 ## AI API (Preview) <a href="#ai-api" id="ai-api"></a>
 
 * [About the AI API](ai-api/about-the-api.md)
 * [Authentication](ai-api/authentication.md)
 * [Knowledge Bases](ai-api/knowledge-bases.md)
+
+## How-to Guides
+
+* [How to use the Table of Contents API](how-to-guides/how-to-use-the-table-of-contents-api.md)
+* [How to download images](how-to-guides/how-to-download-images.md)
