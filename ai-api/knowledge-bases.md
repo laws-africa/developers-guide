@@ -43,7 +43,7 @@ The API will return matching items (portions of legislation) that match your que
 
 ### Result item information
 
-The API returns the text of the matching item, the score from 0 (a very poor match) to 1.0 (a very good match), and metadata for the portion. This provides very precise details on the portion of legislation that matched the query, allowing you to provide concrete citation information to your user.
+The API returns the text of the matching item, the score of the match (a lower score is better), and metadata for the portion. This provides very precise details on the portion of legislation that matched the query, allowing you to provide concrete citation information to your user.
 
 The metadata includes a combination of:
 
