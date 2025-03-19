@@ -212,9 +212,9 @@ components:
           description: The text to find matching items for
         top_k:
           type: integer
-          maximum: 10
+          maximum: 100
           minimum: 1
-          default: 5
+          default: 10
           description: Number of results to return
       required:
       - text
