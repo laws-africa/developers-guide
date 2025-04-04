@@ -98,6 +98,7 @@ For example:
     "frbr_country": "za",
     "title": "NEHAWU obo Manyana and Another v Masege N.O. and Others (JR 363/2012) [2014] ZALCJHB 139 (8 April 2014)",
     "expression_date": "2014-04-08",
+    "expression_frbr_uri": "/akn/za/judgment/zalcjhb/2014/139/eng@2014-04-08",
     "portion_type": "page",
     "portion_id": 30
   }
