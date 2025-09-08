@@ -20,6 +20,15 @@ Knowledge Bases include only the most recent version of legislation. See [Works 
 
 Our judgments Knowledge Bases contain the full text of all the court judgments (case law) that is available from our various Legal Information Institute (LII) partner websites. The judgments are split into chunks of text (along page boundaries, if pages are available) and embeddings are calculated for each chunk. These embeddings make it possible to perform semantic queries against the judgment dataset.
 
+## Legislation chunking and embedding process
+
+Our legislation chunking and embedding process is based on the hierarchical structure of the legislation document. This makes it possible to find specific sections of legislation that match a query.
+
+1. The text for all chapters, parts and sections are extracted. We do not process individual provisions below section level, such as paragraphs or sub-paragraphs.
+2. The headings of the containing chapters and parts are added to each provision's text for additional context.
+3. The text for each provision is chunked at about 256 tokens, split along sentence boundaries with a small overlap.
+4. Embeddings are calculated for each chunk. Currently we use [Cohere's embed-multilingual-v3](https://docs.cohere.com/docs/cohere-embed).
+
 ## List available Knowledge Bases
 
 {% openapi src="../.gitbook/assets/Laws.Africa AI API (v1).yaml" path="/ai/v1/knowledge-bases" method="get" %}
