@@ -189,7 +189,7 @@ components:
           format: double
           maximum: 1.0
           minimum: 0
-          description: The relevance score of the item
+          description: The similarity score of the item (lower is better)
       required:
       - content
       - metadata
@@ -212,10 +212,96 @@ components:
           description: The text to find matching items for
         top_k:
           type: integer
-          maximum: 100
+          maximum: 50
           minimum: 1
           default: 10
           description: Number of results to return
+        filters:
+          properties:
+            work_frbr_uri:
+              anyOf:
+              - type: string
+              - type: 'null'
+              default: null
+              title: Work Frbr Uri
+            work_frbr_uri__in:
+              anyOf:
+              - items:
+                  type: string
+                type: array
+              - type: 'null'
+              default: null
+              title: Work Frbr Uri  In
+            expression_frbr_uri:
+              anyOf:
+              - type: string
+              - type: 'null'
+              default: null
+              title: Expression Frbr Uri
+            expression_frbr_uri__in:
+              anyOf:
+              - items:
+                  type: string
+                type: array
+              - type: 'null'
+              default: null
+              title: Expression Frbr Uri  In
+            frbr_place:
+              anyOf:
+              - type: string
+              - type: 'null'
+              default: null
+              title: Frbr Place
+            frbr_place__in:
+              anyOf:
+              - items:
+                  type: string
+                type: array
+              - type: 'null'
+              default: null
+              title: Frbr Place  In
+            frbr_doctype:
+              anyOf:
+              - type: string
+              - type: 'null'
+              default: null
+              title: Frbr Doctype
+            frbr_doctype__in:
+              anyOf:
+              - items:
+                  type: string
+                type: array
+              - type: 'null'
+              default: null
+              title: Frbr Doctype  In
+            frbr_subtype:
+              anyOf:
+              - type: string
+              - type: 'null'
+              default: null
+              title: Frbr Subtype
+            frbr_subtype__in:
+              anyOf:
+              - items:
+                  type: string
+                type: array
+              - type: 'null'
+              default: null
+              title: Frbr Subtype  In
+            repealed:
+              anyOf:
+              - type: boolean
+              - type: 'null'
+              default: null
+              title: Repealed
+            commenced:
+              anyOf:
+              - type: boolean
+              - type: 'null'
+              default: null
+              title: Commenced
+          title: KnowledgeBaseFilters
+          type: object
       required:
       - text
     KnowledgeBaseRetrieveResponse:
@@ -230,6 +316,9 @@ components:
       - results
     PaginatedKnowledgeBaseList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -237,9 +326,13 @@ components:
         next:
           type: string
           nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
         previous:
           type: string
           nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
         results:
           type: array
           items:
