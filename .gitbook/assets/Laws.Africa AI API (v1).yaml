@@ -212,7 +212,7 @@ components:
           description: The text to find matching items for
         top_k:
           type: integer
-          maximum: 50
+          maximum: 100
           minimum: 1
           default: 10
           description: Number of results to return
@@ -300,6 +300,12 @@ components:
               - type: 'null'
               default: null
               title: Commenced
+            principal:
+              anyOf:
+              - type: boolean
+              - type: 'null'
+              default: null
+              title: Principal
           title: KnowledgeBaseFilters
           type: object
       required:
