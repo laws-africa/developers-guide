@@ -49,8 +49,22 @@ When you query a knowledge base, you must submit a POST request:
 
 1. Identify the Knowledge Base to query using its **code** in the URL of the request.
 2. Specify the text to search the Knowledge Base for using the `text` parameter.
+3. Specify filters to restrict the documents that are searched.
 
-The API will return matching items (portions of legislation) that match your query, including a score, the text of the portion, and metadata.
+The API will return matching items (portions of legislation, pages of judgment text) that match your query, including a score, the text of the portion, and metadata.
+
+### Filters
+
+It is useful to apply filters to limit results, particularly when doing legislation searches. It is recommended you apply these filters for legislation:
+
+* Principal works only (ie. exclude amending and commencement notices):  `principal: true`
+* Exclude repealed works: `repealed: false`&#x20;
+
+In JSON format, use:
+
+```
+"filters": {"principal": true, "repealed": false}}
+```
 
 {% openapi src="../.gitbook/assets/Laws.Africa AI API (v1).yaml" path="/ai/v1/knowledge-bases/{code}/retrieve" method="post" %}
 [Laws.Africa AI API (v1).yaml](<../.gitbook/assets/Laws.Africa AI API (v1).yaml>)
