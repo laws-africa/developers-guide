@@ -29,3 +29,6 @@ Our legislation chunking and embedding process is based on the hierarchical stru
 3. The text for each provision is chunked at about 256 tokens, split along sentence boundaries with a small overlap.
 4. Embeddings are calculated for each chunk. Currently we use [Cohere's embed-multilingual-v3](https://docs.cohere.com/docs/cohere-embed).
 
+## Examples
+
+Explore examples on how to use the Laws.Africa Knowledge Base API in our GitHub examples repo at [https://github.com/laws-africa/knowledge-base-examples](https://github.com/laws-africa/knowledge-base-examples)
