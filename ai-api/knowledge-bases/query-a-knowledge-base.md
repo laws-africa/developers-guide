@@ -24,7 +24,7 @@ It is useful to apply filters to limit results, particularly when doing legislat
 In JSON format, use:
 
 ```
-"filters": {"principal": true, "repealed": false}}
+"filters": {"principal": true, "repealed": false}
 ```
 
 ## Example
@@ -39,7 +39,7 @@ Content-Type: application/json
 {
   "text": "national anthem",
   "top_k": 5,
-  "filters": {"principal": true, "repealed": "false"}
+  "filters": {"principal": true, "repealed": false}
 }
 ```
 
