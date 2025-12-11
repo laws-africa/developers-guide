@@ -26,4 +26,4 @@ The API is described using the Open API format.
 
 * Download the OpenAPI Schema from [https://api.laws.africa/ai/v1/schema](https://api.laws.africa/ai/v1/schema)
 * API documentation in Swagger format: [https://api.laws.africa/ai/v1/schema/swagger-ui](https://api.laws.africa/ai/v1/schema/swagger-ui)
-* API documentation in Redoc format: [https://api.laws.africa/ai/v1/schema/redoc](https://api.laws.africa/v3/schema/redoc)
+* API documentation in Redoc format: [https://api.laws.africa/ai/v1/schema/redoc](https://api.laws.africa/ai/v1/schema/redoc)
