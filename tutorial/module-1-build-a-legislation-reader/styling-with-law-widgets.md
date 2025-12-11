@@ -33,9 +33,7 @@ We'll use the [\<la-akoma-ntoso>](https://github.com/laws-africa/law-widgets/blo
   ></script>
 </head>
 <body>
-  <a href="{% raw %}
-{% url 'home' %}
-{% endraw %}">Home</a>
+  <a href="{% url 'home' %}">Home</a>
   
   <h1>{{ expression.title }}</h1>
   

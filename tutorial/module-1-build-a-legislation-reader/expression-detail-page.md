@@ -53,9 +53,7 @@ Now create a template called `templates/reader/expression_detail.html`. We'll st
   <title>{{ expression.title }}</title>
 </head>
 <body>
-  <a href="{% raw %}
-{% url 'home' %}
-{% endraw %}">Home</a>
+  <a href="{% url 'home' %}">Home</a>
   
   <h1>{{ expression.title }}</h1>
   

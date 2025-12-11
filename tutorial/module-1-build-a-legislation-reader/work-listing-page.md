@@ -36,14 +36,12 @@ Now create the matching template. Django will automatically look for a file call
   <h1>Cape Town By-laws</h1>
   
   <table>
-    {% raw %}
-{% for work in work_list %}
+    {% for work in work_list %}
       <tr>
         <td>{{ work.title }}</td>
         <td>{{ work.frbr_uri }}</td>
       </tr>
     {% endfor %}
-{% endraw %}
   </table>
 </body>
 ```
@@ -133,8 +131,7 @@ Now we can update the template to link to the latest expression.
   <h1>Cape Town By-laws</h1>
   
   <table>
-    {% raw %}
-{% for work in work_list %}
+    {% for work in work_list %}
       <tr>
         <td>
           {% with work.default_expression as expr %}
@@ -148,7 +145,6 @@ Now we can update the template to link to the latest expression.
         <td>{{ work.frbr_uri }}</td>
       </tr>
     {% endfor %}
-{% endraw %}
   </table>
 </body>
 ```

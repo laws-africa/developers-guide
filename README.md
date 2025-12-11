@@ -10,14 +10,14 @@ This guide will help you to use the Laws.Africa Content API to integrate Laws.Af
 
 ### **Tutorial**
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/RhPOZJnZYEMnDFo0mVSg" %}
+[Broken link](/broken/pages/RhPOZJnZYEMnDFo0mVSg)
 {% endcontent-ref %}
 
 ### API Reference
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-LrrrItb3QTdzPzsDuY0" %}
+[Broken link](/broken/pages/-LrrrItb3QTdzPzsDuY0)
 {% endcontent-ref %}
 
 ### **How-to Guides**

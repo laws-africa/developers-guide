@@ -54,9 +54,11 @@
 * [About the AI API](ai-api/about-the-api.md)
 * [Authentication](ai-api/authentication.md)
 * [Knowledge Bases](ai-api/knowledge-bases/README.md)
-  * [List knowledge bases](ai-api/knowledge-bases/list-knowledge-bases.md)
-  * [Describe a knowledge base](ai-api/knowledge-bases/describe-a-knowledge-base.md)
-  * [Query a knowledge base](ai-api/knowledge-bases/query-a-knowledge-base.md)
+  * [Types of Knowledge Bases](ai-api/knowledge-bases/types-of-knowledge-bases.md)
+  * [Using a Knowledge Base](ai-api/knowledge-bases/using-a-knowledge-base.md)
+  * [List Knowledge Bases](ai-api/knowledge-bases/list-knowledge-bases.md)
+  * [Get a Knowledge Base](ai-api/knowledge-bases/get-a-knowledge-base.md)
+  * [Query a Knowledge Base](ai-api/knowledge-bases/query-a-knowledge-base.md)
 
 ## How-to Guides
 

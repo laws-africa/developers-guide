@@ -98,7 +98,7 @@ Finally, let's put that HTML into a webpage and include the [Laws.Africa Law Wid
 
 ## Next steps
 
-* [The Tutorial](broken-reference) goes step-by-step through building a Django application that display legislation fetched from the Laws.Africa Content API.
+* [The Tutorial](/broken/pages/RhPOZJnZYEMnDFo0mVSg) goes step-by-step through building a Django application that display legislation fetched from the Laws.Africa Content API.
 * Browse the [API documentation](overview.md).
 
 {% content-ref url="overview.md" %}
