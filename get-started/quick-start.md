@@ -21,8 +21,8 @@ Find out more about API subscriptions and licensing terms at [https://laws.afric
 
 To get started, you'll need a free Laws.Africa account and API token.
 
-1. Sign up for a free Laws.Africa account at [https://edit.laws.africa/accounts/login/](https://edit.laws.africa/accounts/login/)
-2. Get your API token from [https://edit.laws.africa/accounts/profile/api/](https://edit.laws.africa/accounts/profile/api/)
+1. Sign up for a free Laws.Africa account at [https://platform.laws.africa/](https://platform.laws.africa/)
+2. Get your API token from [https://platform.laws.africa/api-keys/](https://platform.laws.africa/api-keys/)
 
 {% hint style="info" %}
 In the examples below, replace `<YOUR_AUTH_TOKEN>` with your personal API token.
