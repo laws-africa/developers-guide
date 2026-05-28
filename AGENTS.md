@@ -9,11 +9,10 @@ Markdown documentation.
 
 - `README.md`: landing page for the guide.
 - `SUMMARY.md`: table of contents and navigation order.
-- `get-started/`: introductory concepts, quick start, webhooks, and changelog.
-- `api/`: Content API reference pages.
-- `ai-api/`: AI API reference pages.
-- `how-to-guides/`: task-focused guides.
-- `tutorial/`: multi-module tutorial content.
+- `get-started/`: platform overview, API choice guidance, and shared authentication.
+- `knowledge-bases/`: Knowledge Base concepts, quick start, usage guides, and reference.
+- `content-api/`: Content API overview, quick start, concepts, how-to guides, and reference.
+- `tutorials/`: advanced multi-module tutorial content.
 
 There is no application source code or local build configuration in this repo.
 Treat the Markdown files and GitBook navigation as the source of truth.
@@ -37,9 +36,9 @@ Treat the Markdown files and GitBook navigation as the source of truth.
 - Use numbered lists for procedures and bullets for reference lists.
 - Explain required concepts before using specialist terms such as FRBR URI,
   expression, enrichment, or Akoma Ntoso.
-- Keep API examples copy-paste friendly and include placeholders such as
-  `<YOUR_AUTH_TOKEN>` for secrets.
+- Keep API examples copy-paste friendly and include placeholders such as `<YOUR_AUTH_TOKEN>` for secrets.
 - Use UK/South African English conventions where wording differs.
+- Maximum line length is 100 chars.
 
 ## Markdown and GitBook Conventions
 
@@ -95,7 +94,7 @@ changes:
 ## Commit and Pull Request Notes
 
 - Keep commits scoped to one documentation change or related group of pages.
-- Use concise commit subjects such as `Add AI API query docs` or
+- Use concise commit subjects such as `Add Knowledge Base query docs` or
   `Fix quick start links`.
 - In PR descriptions, summarize the docs changed, list any validation performed,
   and call out any API behaviour that was verified externally.
