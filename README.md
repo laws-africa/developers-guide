@@ -27,6 +27,10 @@ webhooks.
 [choose-an-api.md](get-started/choose-an-api.md)
 {% endcontent-ref %}
 
+{% content-ref url="get-started/pricing.md" %}
+[pricing.md](get-started/pricing.md)
+{% endcontent-ref %}
+
 ## Start building
 
 {% content-ref url="knowledge-bases/README.md" %}
@@ -39,5 +43,5 @@ webhooks.
 
 ## Still not sure?
 
-* [Compare subscription plans](https://laws.africa/platform/)
+* [Pricing and plans](get-started/pricing.md)
 * [Contact us](https://laws.africa/contact)

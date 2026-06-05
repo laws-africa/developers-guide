@@ -57,8 +57,9 @@ legislation, in this format, so I can store, render or process it myself."
 
 The membership plans support a progression from experimentation to production:
 
-* **Sandbox** for free experimentation.
-* **Build** for production workflows in one country.
+* **Sandbox** for free experimentation with one country and limited daily usage.
+* **Build** for production Knowledge Base workflows in one country.
 * **Scale** for broader coverage, higher usage and full Content API access.
 
-See [plans and pricing](https://laws.africa/platform/) for current limits and pricing information details.
+See [pricing and plans](pricing.md) for developer-facing plan details, limits
+and current pricing guidance.

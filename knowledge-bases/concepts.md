@@ -84,5 +84,6 @@ eviction lockout without court order residential tenant
 
 ## Plans and limits
 
-Knowledge Bases are available on the platform's Sandbox, Build and Scale plans. Plans differ by country coverage,
-content availability and rate limits. See [plans and pricing](https://laws.africa/platform/) for current details.
+Knowledge Bases are available on the platform's Sandbox, Build and Scale plans.
+Plans differ by country coverage, content availability and rate limits. See
+[Pricing and plans](../get-started/pricing.md) for developer-facing details.

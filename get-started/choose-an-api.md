@@ -57,3 +57,16 @@ Some products use both APIs:
    to render, store or process the complete document.
 
 This is useful when a product starts as search or AI grounding, but later needs deeper content control.
+
+## How pricing affects the choice
+
+Knowledge Bases are available from the free Sandbox plan, which makes them the
+lowest-friction starting point for evaluation and prototypes.
+
+Full Content API access is available on Scale and Enterprise plans. Use it when
+your product needs complete legislation collections, historical versions,
+structured formats or update webhooks.
+
+{% content-ref url="pricing.md" %}
+[pricing.md](pricing.md)
+{% endcontent-ref %}
