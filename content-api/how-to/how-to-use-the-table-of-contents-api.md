@@ -76,7 +76,7 @@ Use the Table of Contents API to:
 Fetch the Table of Contents for a work using the `/frbr-uri/toc.json` URL for the work, such as [https://api.laws.africa/v3/akn/za-cpt/act/by-law/2011/animal/toc.json](https://api.laws.africa/v3/akn/za-cpt/act/by-law/2011/animal/toc.json).
 
 ```bash
-curl -H "Authorization: Token <YOUR_AUTH_TOKEN>" \
+curl -H "Authorization: Bearer <YOUR_AUTH_TOKEN>" \
   https://api.laws.africa/v3/akn/za-cpt/act/by-law/2011/animal/toc.json
 ```
 
@@ -227,10 +227,10 @@ function selectionChanged(e) {
       container = document.getElementById('section-content'),
       url = e.target.value + '.html',
       // get your API token from https://platform.laws.africa/api-keys/
-      apiToken = 'YOUR API TOKEN';
+      apiToken = '<YOUR_AUTH_TOKEN>';
 
   xhr.open('GET', url);
-  xhr.setRequestHeader('Authorization', 'Token ' + apiToken);
+  xhr.setRequestHeader('Authorization', 'Bearer ' + apiToken);
   xhr.onload = function() {
     if (xhr.status === 200) {
       container.innerHTML = xhr.responseText;

@@ -4,7 +4,9 @@ description: Webhooks are push notifications when a work is created, updated or 
 
 # Webhooks
 
-You can add a webhook URL in your Laws.Africa platform account at [https://platform.laws.africa/webhooks/](https://platform.laws.africa/webhooks/).
+When you are logged into the platform, you can add a webhook URL from your
+Laws.Africa platform account at
+[https://platform.laws.africa/webhooks/](https://platform.laws.africa/webhooks/).
 
 When a Work Expression is created, updated or deleted, [Laws.Africa](http://laws.africa) will send a POST request to the webhook URL with details of the action in JSON in the body of the request.
 

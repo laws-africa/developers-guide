@@ -48,7 +48,7 @@ The Laws.Africa Content API makes it easy to list and download embedded images f
 For example, here is the API call to list the images embedded with Johannesburg's [Public Road and Miscellaneous By-laws by-law](https://openbylaws.org.za/za-jhb/act/by-law/2004/public-road-electronic-communications-networks-and-miscellaneous/eng/):
 
 ```bash
-$ curl -H "Authorization: Token <YOUR_AUTH_TOKEN>" \
+$ curl -H "Authorization: Bearer <YOUR_AUTH_TOKEN>" \
   https://api.laws.africa/v2/akn/za-jhb/act/by-law/2004/public-road-electronic-communications-networks-and-miscellaneous/media.json
 ```
 
@@ -109,4 +109,3 @@ For example, using `?media-url=/static/assets/za/act/1995/2/eng/2018-11-10/` wil
 {% hint style="info" %}
 You should encode the FRBR URI into the `media-url` parameter to ensure that you show images for the correct work, point in time and language.
 {% endhint %}
-

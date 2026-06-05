@@ -16,14 +16,19 @@ You will:
 ## Create an API token
 
 1. Sign up at [https://platform.laws.africa/](https://platform.laws.africa/).
-2. Get your API token from [https://platform.laws.africa/api-keys/](https://platform.laws.africa/api-keys/).
+2. Get your API token from
+   [https://platform.laws.africa/api-keys/](https://platform.laws.africa/api-keys/).
 
 In the examples below, replace `<YOUR_AUTH_TOKEN>` with your token.
+
+Knowledge Base retrieve calls count toward your account's Knowledge Base usage
+limits. You can monitor usage in the platform and read rate-limit guidance in
+[manage your plan and subscription](../get-started/manage-your-plan.md).
 
 ## List available Knowledge Bases
 
 ```bash
-curl -H "Authorization: Token <YOUR_AUTH_TOKEN>" \
+curl -H "Authorization: Bearer <YOUR_AUTH_TOKEN>" \
   https://api.laws.africa/ai/v1/knowledge-bases
 ```
 
@@ -36,7 +41,7 @@ Cape Town dog ownership rules.
 
 ```bash
 curl -X POST \
-  -H "Authorization: Token <YOUR_AUTH_TOKEN>" \
+  -H "Authorization: Bearer <YOUR_AUTH_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{
     "text": "dog ownership cape town",
@@ -73,8 +78,9 @@ The response contains matching legal portions:
 ```
 
 {% hint style="info" %}
-For legislation queries, start with `principal: true` and `repealed: false` so results prefer current principal
-legislation rather than amendment notices or repealed works.
+For legislation queries, start with `principal: true` and `repealed: false` so
+results prefer current principal legislation rather than amendment notices or
+repealed works.
 {% endhint %}
 
 ## Use the result in Python
@@ -88,7 +94,7 @@ KB_CODE = "legislation-za-municipal"
 response = requests.post(
     f"https://api.laws.africa/ai/v1/knowledge-bases/{KB_CODE}/retrieve",
     headers={
-        "Authorization": f"Token {TOKEN}",
+        "Authorization": f"Bearer {TOKEN}",
         "Content-Type": "application/json",
     },
     json={
@@ -122,8 +128,9 @@ for result in results:
 print("\n\n".join(context))
 ```
 
-Pass this context into your search interface, RAG prompt or agent response with the user's question. Always include
-source URLs so users can inspect the legal material.
+Pass this context into your search interface, RAG prompt or agent response with
+the user's question. Always include source URLs so users can inspect the legal
+material.
 
 ## Next steps
 

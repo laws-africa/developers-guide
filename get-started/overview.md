@@ -63,3 +63,7 @@ The membership plans support a progression from experimentation to production:
 
 See [pricing and plans](pricing.md) for developer-facing plan details, limits
 and current pricing guidance.
+
+Use [Manage your plan and subscription](manage-your-plan.md) to learn how to
+check active services, change your primary API country, request plan changes and
+monitor usage in the platform.

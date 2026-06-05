@@ -7,6 +7,7 @@
 * [Platform overview](get-started/overview.md)
 * [Choose Knowledge Bases or the Content API](get-started/choose-an-api.md)
 * [Pricing and plans](get-started/pricing.md)
+* [Manage your plan and subscription](get-started/manage-your-plan.md)
 * [Authentication and API keys](get-started/authentication.md)
 
 ## Knowledge Bases
