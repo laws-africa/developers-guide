@@ -13,7 +13,8 @@ The request must:
 2. include the `text` to search for;
 3. optionally include `top_k` and `filters`.
 
-The response returns matching items with text, metadata and a score.
+The response returns matching items with text, metadata and a non-negative relevance score. Results are ordered by
+score, with higher scores first. Treat `score` as an opaque ranking value, not a percentage or probability.
 
 {% openapi-operation spec="laws-africa-ai-api" path="/ai/v1/knowledge-bases/{code}/retrieve" method="post" %}
 [OpenAPI laws-africa-ai-api](https://api.laws.africa/ai/v1/schema)

@@ -58,9 +58,10 @@ Each result includes:
 
 * `content.text`: the matched legal text or summary;
 * `metadata`: source information such as title, FRBR URI, dates and public URLs;
-* `score`: the similarity score.
+* `score`: an opaque relevance score.
 
-Lower scores indicate a closer match.
+Results are returned in descending relevance order. Higher scores indicate stronger matches. Treat scores as
+opaque non-negative ranking values; compare them only within the same response.
 
 Use public URLs from result metadata when showing results to users or grounding AI responses. They let users inspect the
 source material.
