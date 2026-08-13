@@ -20,12 +20,12 @@ Let's extract the text from Section 3 of the Cape Town Liquor By-law.
 
 Section 3's XML is below. Even a short section that looks quite simple can have complex XML.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Section 3's XML.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Section 3's XML.</p></figcaption></figure>
 
 We can use the **eId** attribute to find Section 3.
 
 {% hint style="info" %}
-The **eId** attribute is a unique identifier that appears on (almost) all elements in an Akoma Ntoso XML document. You can read more about how they are generated in the [Akoma Ntoso XML specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#\_Toc531692303).&#x20;
+The **eId** attribute is a unique identifier that appears on (almost) all elements in an Akoma Ntoso XML document. You can read more about how they are generated in the [Akoma Ntoso XML specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303).
 {% endhint %}
 
 Let's use a new xpath query to find the `<section>` element that has an `eId` of "`sec_3`".
@@ -73,10 +73,10 @@ For example, consider this XML and XPath outputs.
 
 In HTML, this would be shown as: Release of atmospheric CO₂.
 
-| XPath                 | Text                          | Comment                                                                     |
-| --------------------- | ----------------------------- | --------------------------------------------------------------------------- |
-| `//a:heading/text()`  | `Release of atmospheric CO.`  | Only text nodes that are **immediate children** of  `heading` are included. |
-| `//a:heading//text()` | `Release of atmospheric CO2.` | All text nodes that are **descendants** of  `heading` are included.         |
+| XPath                 | Text                          | Comment                                                                    |
+| --------------------- | ----------------------------- | -------------------------------------------------------------------------- |
+| `//a:heading/text()`  | `Release of atmospheric CO.`  | Only text nodes that are **immediate children** of `heading` are included. |
+| `//a:heading//text()` | `Release of atmospheric CO2.` | All text nodes that are **descendants** of `heading` are included.         |
 
 Finally, let's extract the text from all headings, subheadings and cross-headings. There are two equivalent ways of doing this.
 
@@ -103,7 +103,7 @@ The second option uses one XPath and conditions to match multiple types of eleme
 
 In all the examples so far, we have used `text = ' '.join(...)`. What is the `join` and why is it important?
 
-The `' '.join(items)` takes all the elements in `items` and joins them together with a single space. It's the equivalent of the Javascript `items.join(' ')`.&#x20;
+The `' '.join(items)` takes all the elements in `items` and joins them together with a single space. It's the equivalent of the Javascript `items.join(' ')`.
 
 It ensures that all the text nodes are separated with a space.
 

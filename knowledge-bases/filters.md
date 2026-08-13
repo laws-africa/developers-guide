@@ -4,8 +4,7 @@ description: Filter Knowledge Base retrieve requests.
 
 # Filters
 
-Use filters to restrict which documents a Knowledge Base searches. Filters are most useful for legislation Knowledge
-Bases, especially provincial and municipal collections.
+Use filters to restrict which documents a Knowledge Base searches. Filters are most useful for legislation Knowledge Bases, especially provincial and municipal collections.
 
 ## Recommended legislation filters
 
@@ -24,8 +23,7 @@ These filters exclude amendment or commencement works and repealed legislation.
 
 ## Place filters
 
-Use `frbr_place` or `frbr_place__in` when you know the country, province,
-municipality or other locality you want to search.
+Use `frbr_place` or `frbr_place__in` when you know the country, province, municipality or other locality you want to search.
 
 ```json
 {
@@ -58,8 +56,7 @@ The retrieve API also supports:
 * `commenced`;
 * `principal`.
 
-Use exact filters only when your application already knows the relevant value. For exploratory search, start broad and
-then narrow the query.
+Use exact filters only when your application already knows the relevant value. For exploratory search, start broad and then narrow the query.
 
 ## Example
 
@@ -75,4 +72,4 @@ then narrow the query.
 }
 ```
 
-See the [retrieve endpoint reference](reference/query-a-knowledge-base.md) for the full request schema.
+See the [retrieve endpoint reference](/broken/pages/GxCVmalmkkGrVfvlFuXp) for the full request schema.

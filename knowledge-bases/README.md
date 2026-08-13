@@ -1,19 +1,16 @@
 ---
-description: Retrieve authoritative African legal context for AI, search and workflow tools.
+description: >-
+  Retrieve authoritative African legal context for AI, search and workflow
+  tools.
 ---
 
 # Knowledge Bases
 
-A Knowledge Base is a searchable legal collection for a place and content type,
-such as national legislation, municipal by-laws or court judgments.
+A Knowledge Base is a searchable legal collection for a place and content type, such as national legislation, municipal by-laws or court judgments.
 
-Use Knowledge Bases when your application needs relevant legal context but does
-not need to store and maintain full legal collections itself. They are the
-fastest way to build legal AI assistants, RAG systems, legal agents, semantic
-search and workflow tools grounded in African legal information.
+Use Knowledge Bases when your application needs relevant legal context but does not need to store and maintain full legal collections itself. They are the fastest way to build legal AI assistants, RAG systems, legal agents, semantic search and workflow tools grounded in African legal information.
 
-When you query a Knowledge Base, Laws.Africa runs text and semantic search over
-maintained legal collections and returns the best matching results with:
+When you query a Knowledge Base, Laws.Africa runs text and semantic search over maintained legal collections and returns the best matching results with:
 
 * legal text or summaries;
 * source metadata;
@@ -48,14 +45,14 @@ Knowledge Bases are useful for:
 
 Knowledge Bases are available at:
 
-```text
+```
 https://api.laws.africa/ai/v1/knowledge-bases
 ```
 
 The Knowledge Base retrieve endpoint is:
 
-```text
+```
 POST https://api.laws.africa/ai/v1/knowledge-bases/{code}/retrieve
 ```
 
-See the [reference](reference/README.md) for endpoint details.
+See the [reference](reference.md) for endpoint details.

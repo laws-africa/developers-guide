@@ -23,7 +23,7 @@ The items in the `results` array are the **most recent expression** of each by-l
 
 Legislation changes over time (also called "points in time"), and may also be available in different languages. The content API returns the most recent (latest) available version, in the country's default language (English in this example).
 
-Other points-in-time (**expressions**) may also be available. These are listed in the  `points_in_time` attribute. It contains the dates and expressions available at those dates. There will only be different expressions at the same date if there are different languages. Each entry includes a URL with the full details of that particular expression.
+Other points-in-time (**expressions**) may also be available. These are listed in the `points_in_time` attribute. It contains the dates and expressions available at those dates. There will only be different expressions at the same date if there are different languages. Each entry includes a URL with the full details of that particular expression.
 
 * Each `point_in_time`'s `expression` has its own `url`, to which you can append `.json` to fetch the JSON details of the expression.
 * If you don't append `.json`, it will return the XML of the expression.
@@ -46,7 +46,7 @@ This command should do the following:
     * For the HTML content, append `.html` to the `url` for the expression.
     * For the table of contents, append `/toc.json` to the `url` for the expression.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Create the `management/commands/` directories inside `reader`:
 
@@ -136,4 +136,3 @@ This command takes your API key as a parameter and stores the content from the A
 ```bash
 python manage.py ingest_capetown_bylaws <YOUR_AUTH_TOKEN>
 ```
-

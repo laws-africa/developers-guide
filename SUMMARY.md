@@ -19,10 +19,7 @@
 * [Filters](knowledge-bases/filters.md)
 * [Legislation Knowledge Bases](knowledge-bases/legislation.md)
 * [Judgment Knowledge Bases](knowledge-bases/judgments.md)
-* [API Reference](knowledge-bases/reference/README.md)
-  * [List Knowledge Bases](knowledge-bases/reference/list-knowledge-bases.md)
-  * [Get a Knowledge Base](knowledge-bases/reference/get-a-knowledge-base.md)
-  * [Query a Knowledge Base](knowledge-bases/reference/query-a-knowledge-base.md)
+* [API Reference](knowledge-bases/reference.md)
 
 ## Content API
 
