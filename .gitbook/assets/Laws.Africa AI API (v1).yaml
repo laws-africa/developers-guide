@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Laws.Africa Content API
-  version: 19.0.0 (v1)
+  version: 20.0.0 (v1)
   description: Read-only Content API
 paths:
   /ai/v1/knowledge-bases:
@@ -30,6 +30,7 @@ paths:
       security:
       - cookieAuth: []
       - tokenAuth: []
+      - tokenAuth: []
       responses:
         '200':
           content:
@@ -56,6 +57,7 @@ paths:
       - knowledge-bases
       security:
       - cookieAuth: []
+      - tokenAuth: []
       - tokenAuth: []
       responses:
         '200':
@@ -92,6 +94,7 @@ paths:
         required: true
       security:
       - cookieAuth: []
+      - tokenAuth: []
       - tokenAuth: []
       responses:
         '200':
@@ -181,15 +184,12 @@ components:
         content:
           $ref: '#/components/schemas/KnowledgeBaseItemContent'
         metadata:
-          type: object
-          additionalProperties: {}
-          description: Metadata for the item
+          $ref: '#/components/schemas/KnowledgeBaseItemMetadata'
         score:
           type: number
           format: double
-          maximum: 1.0
           minimum: 0
-          description: The similarity score of the item (lower is better)
+          description: The similarity score of the item (higher is better)
       required:
       - content
       - metadata
@@ -203,6 +203,94 @@ components:
           description: The text content of the item
       required:
       - text
+    KnowledgeBaseItemMetadata:
+      type: object
+      description: Metadata about a knowledge base item.
+      properties:
+        work_frbr_uri:
+          type: string
+          description: Work FRBR URI for the work the item belongs to
+        frbr_place:
+          type: string
+          description: FRBR place code
+        frbr_country:
+          type: string
+          description: FRBR country code
+        frbr_doctype:
+          type: string
+          description: FRBR document type
+        frbr_subtype:
+          type: string
+          description: FRBR document subtype
+        title:
+          type: string
+          description: Title of the document the item belongs to
+        repealed:
+          type: boolean
+          description: Is the work repealed? Legislation only.
+        commenced:
+          type: boolean
+          description: Is the work commenced? Legislation only.
+        principal:
+          type: boolean
+          description: Is the work a principal work? Legislation only.
+        blurb:
+          type: string
+          description: A short one-sentence summary of the document (Judgments only).
+        flynote:
+          type: string
+          description: A flynote (key phrases) for the document (Judgments only).
+        expression_date:
+          type: string
+          format: date
+          description: Expression date of the document
+        expression_frbr_uri:
+          type: string
+          description: Expression FRBR URI for the document the item belongs to
+        public_url:
+          type: string
+          description: Public URL to access the document
+        portion_type:
+          allOf:
+          - $ref: '#/components/schemas/PortionTypeEnum'
+          description: |-
+            Type of the portion
+
+            * `page` - page
+            * `provision` - provision
+            * `text` - text
+            * `summary` - summary
+        portion_id:
+          type: string
+          description: Identifier of the portion. A page number when type=page, an
+            eid when type=portion.
+        portion_title:
+          type: string
+          description: Title of the portion
+        portion_parent_ids:
+          type: array
+          items:
+            type: string
+          description: List of parent portion IDs, from top downwards
+        portion_parent_titles:
+          type: array
+          items:
+            type: string
+          description: List of parent portion titles, from top downwards
+        portion_public_url:
+          type: string
+          description: Public URL to access the portion
+      required:
+      - expression_date
+      - expression_frbr_uri
+      - frbr_country
+      - frbr_doctype
+      - frbr_place
+      - frbr_subtype
+      - portion_type
+      - public_url
+      - title
+      - work_frbr_uri
     KnowledgeBaseRetrieveRequest:
       type: object
       description: Details to retrieve items from a knowledge base.
@@ -343,13 +431,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/KnowledgeBase'
+    PortionTypeEnum:
+      enum:
+      - page
+      - provision
+      - text
+      - summary
+      type: string
+      description: |-
+        * `page` - page
+        * `provision` - provision
+        * `text` - text
+        * `summary` - summary
   securitySchemes:
     cookieAuth:
       type: apiKey
       in: cookie
       name: sessionid
     tokenAuth:
-      type: apiKey
-      in: header
-      name: Authorization
-      description: Token-based authentication with required prefix "Token"
+      type: http
+      scheme: bearer
