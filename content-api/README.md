@@ -20,6 +20,11 @@ For AI grounding, search, RAG and legal agents, start with [Knowledge Bases](../
 Content API when retrieval is not enough and your product needs deeper control over storage,
 processing or presentation.
 
+## Country availability
+
+For the current countries and legislation collections available through the Content API, see the
+[Content API service page](https://platform.laws.africa/services/content-api/).
+
 ## Endpoint
 
 The latest version of the Content API is version 3:

@@ -27,6 +27,13 @@ Knowledge Bases are useful for:
 * giving agents a legal retrieval tool;
 * triaging legal research questions before deeper review.
 
+## Country availability
+
+For the current countries and legal collections available as Knowledge Bases, see the
+[Knowledge Bases service page](https://platform.laws.africa/services/knowledge-bases/).
+
+Availability depends on the country and content type.
+
 ## Start here
 
 {% content-ref url="quick-start.md" %}
