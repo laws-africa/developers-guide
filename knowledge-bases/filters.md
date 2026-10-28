@@ -49,7 +49,6 @@ The retrieve API also supports:
 
 * `work_frbr_uri` and `work_frbr_uri__in`;
 * `expression_frbr_uri` and `expression_frbr_uri__in`;
-* `frbr_country`;
 * `frbr_doctype` and `frbr_doctype__in`;
 * `frbr_subtype` and `frbr_subtype__in`;
 * `repealed`;
