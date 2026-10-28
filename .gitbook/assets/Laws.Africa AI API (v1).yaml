@@ -98,11 +98,53 @@ paths:
       - tokenAuth: []
       responses:
         '200':
+          headers:
+            RateLimit-Policy:
+              schema:
+                type: string
+              description: 'Finite quotas: "minute";q=30;w=60, "day";q=100;w=86400.
+                q is the request limit; w is the fixed UTC window length in seconds.
+                Quotas are shared per user and product family across Knowledge Bases
+                and API keys. Omitted when no finite quotas apply.'
+            RateLimit:
+              schema:
+                type: string
+              description: 'Current quota: "minute";r=24;t=18, "day";r=82;t=31018.
+                r is remaining requests (after counting a successful request); t is
+                seconds until reset, rounded up. Values are advisory under concurrency.
+                Omitted when no finite quotas apply.'
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/KnowledgeBaseRetrieveResponse'
           description: ''
+        '429':
+          headers:
+            RateLimit-Policy:
+              schema:
+                type: string
+              description: 'Finite quotas: "minute";q=30;w=60, "day";q=100;w=86400.
+                q is the request limit; w is the fixed UTC window length in seconds.
+                Quotas are shared per user and product family across Knowledge Bases
+                and API keys. Omitted when no finite quotas apply.'
+            RateLimit:
+              schema:
+                type: string
+              description: 'Current quota: "minute";r=24;t=18, "day";r=82;t=31018.
+                r is remaining requests (after counting a successful request); t is
+                seconds until reset, rounded up. Values are advisory under concurrency.
+                Omitted when no finite quotas apply.'
+            Retry-After:
+              schema:
+                type: integer
+              description: Seconds to wait until all exhausted quota windows reset,
+                rounded up.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeBaseThrottledResponse'
+          description: A user/product-family quota is exhausted. Retry after the indicated
+            delay.
   /ai/v1/schema:
     get:
       operationId: schema_retrieve
@@ -177,6 +219,19 @@ components:
       - description
       - name
       - url
+    KnowledgeBaseCourt:
+      type: object
+      description: Court metadata matching PortionCourt in peachjam_search.serializers.
+      properties:
+        name:
+          type: string
+          description: Name of the court
+        code:
+          type: string
+          description: Code identifying the court
+      required:
+      - code
+      - name
     KnowledgeBaseItem:
       type: object
       description: A knowledge base item.
@@ -225,6 +280,15 @@ components:
         title:
           type: string
           description: Title of the document the item belongs to
+        court:
+          allOf:
+          - $ref: '#/components/schemas/KnowledgeBaseCourt'
+          nullable: true
+          description: Court that issued the judgment, when available.
+        neutral_citation:
+          type: string
+          nullable: true
+          description: Neutral citation of the judgment, when available.
         repealed:
           type: boolean
           description: Is the work repealed? Legislation only.
@@ -262,8 +326,8 @@ components:
             * `summary` - summary
         portion_id:
           type: string
-          description: Identifier of the portion. A page number when type=page, an
-            eid when type=portion.
+          description: Identifier of the portion. A page number when portion_type=page,
+            an eId when portion_type=provision.
         portion_title:
           type: string
           description: Title of the portion
@@ -408,6 +472,13 @@ components:
             $ref: '#/components/schemas/KnowledgeBaseItem'
       required:
       - results
+    KnowledgeBaseThrottledResponse:
+      type: object
+      properties:
+        detail:
+          type: string
+      required:
+      - detail
     PaginatedKnowledgeBaseList:
       type: object
       required:
