@@ -42,6 +42,11 @@ The request must:
 
 The response returns matching items with text, metadata and a score.
 
+Successful retrieve responses and quota-related `429` responses expose `RateLimit-Policy` and
+`RateLimit` headers. A `429` also includes `Retry-After` in seconds. See
+[rate-limit guidance](../get-started/manage-your-plan.md#knowledge-base-response-headers) for
+header meanings, quota sharing and retry behaviour.
+
 {% openapi-operation spec="laws-africa-ai-api" path="/ai/v1/knowledge-bases/{code}/retrieve" method="post" %}
 [OpenAPI laws-africa-ai-api](https://api.laws.africa/ai/v1/schema)
 {% endopenapi-operation %}

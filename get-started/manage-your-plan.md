@@ -59,11 +59,51 @@ apply per minute and per day, depending on the product family and your plan.
 
 Open [Usage](https://platform.laws.africa/usage/) to check current usage.
 
+### Knowledge Base response headers
+
+Successful Knowledge Base retrieve responses and quota-related `429` responses include
+`RateLimit-Policy` and `RateLimit` headers for each finite quota window. These headers use the
+[IETF draft format](https://www.ietf.org/archive/id/draft-ietf-httpapi-ratelimit-headers-11.html).
+For example:
+
+```http
+RateLimit-Policy: "minute";q=30;w=60, "day";q=100;w=86400
+RateLimit: "minute";r=24;t=18, "day";r=82;t=31018
+```
+
+* `q` is the configured request limit; `w` is the window length in seconds.
+* `r` is the number of remaining requests, after counting the current successful request.
+* `t` is the number of seconds until the window resets, rounded up.
+
+Windows are fixed and aligned to UTC: minute windows reset at the start of each minute,
+hour windows at the start of each hour, and daily windows at midnight UTC. Only finite windows
+configured for your subscription are returned, in minute/hour/day order. If there are no finite
+limits, both headers are omitted.
+
+Quotas are shared per user and product family across countries, Knowledge Bases and API keys.
+Legislation and judgments Knowledge Bases draw from the same Knowledge Base quota. Headers are
+advisory snapshots: concurrent requests can consume the remaining capacity before your next request.
+
+A quota-related `429 Too Many Requests` response also includes `Retry-After`, in seconds:
+
+```http
+Retry-After: 31018
+```
+
+Wait at least that long before retrying. If several windows are exhausted, the delay covers the
+latest reset. Throttled attempts do not consume quota. Add jitter to retries to avoid synchronising
+requests, and handle another `429` if concurrent activity has consumed the available quota.
+
+These quota headers apply to the retrieve endpoint; listing, detail, validation and permission
+responses do not include them. They are available to browser clients from permitted CORS origins.
+
+### Client behaviour
+
 Your application should handle `429 Too Many Requests` responses gracefully. For
 production integrations:
 
 * log API response status codes;
-* use retry and backoff for rate-limit responses;
+* respect `Retry-After` when present, and use backoff with jitter otherwise;
 * avoid tight retry loops;
 * cache stable Content API responses where appropriate;
 * monitor daily usage trends before launch;
